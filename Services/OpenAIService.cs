@@ -23,7 +23,10 @@ public class OpenAIService : IOpenAIService
         var requestBody = new CompletionRequestMessage();
         requestBody.AddSystemMessage("You are a professional trainer. Data should be returned in json format. " +
                                      "The Json should strictly follow this format: " +
-                                     "{\n  \"name\": \"Push-up\",\n  \"howToPerform\": \"Place your hands on the ground, shoulder-width apart, and lower your body until your chest nearly touches the floor. Push back up to the starting position.\",\n  \"muscleGroup\": \"Chest, Triceps, Shoulders\",\n  \"repetitions\": \"15\",\n  \"weightType\": \"Bodyweight\",\n  \"kilograms\": \"0\"\n} " );
+                                     "{\n  \"name\": \"Push-up\",\n  \"howToPerform\": \"Place your hands on the ground, " +
+                                     "shoulder-width apart, and lower your body until your chest nearly touches the floor. " +
+                                     "Push back up to the starting position.\",\n  \"muscleGroup\": \"Chest, Triceps, " +
+                                     "Shoulders\",\n  \"repetitions\": \"15\",\n  \"weightType\": \"Bodyweight\",\n  \"kilograms\": \"0\"\n} " );
         requestBody.AddUserMessage("Give me list of 3 exercises for lower body for experienced level. Give me a description for each" +
                                    "as well as repetitions, type of weights and kilograms. If it's a body weight exercise say that kilograms is 0 ");
 
