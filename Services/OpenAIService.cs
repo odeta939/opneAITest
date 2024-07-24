@@ -21,6 +21,7 @@ public class OpenAIService : IOpenAIService
     {
         const string api = "v1/chat/completions";
         var requestBody = new CompletionRequestMessage();
+        // TODO Create a JSON schema for the expected format
         requestBody.AddSystemMessage("You are a professional trainer. Data should be returned in json format. " +
                                      "The Json should strictly follow this format: " +
                                      "{\n  \"name\": \"Push-up\",\n  \"howToPerform\": \"Place your hands on the ground, " +
